@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 6 - 글자/문단 모양</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@&display=swap" rel="stylesheet">
+    <style>
+    /* color : 컬러명 | #16코드 6자리 | #16코드 3자리 | rgb() | rgba() | hsl() | hsla() -> 글자색상설정 */
+    /* font-size : n단위(px, em, rem, %, vh, vw, ...) -> 글자크기*/
+    /* font-style : normal | italic | obliqye - 기울임꼴유무설정 */
+    /* font-weight : 100~900 (100단위씩) | bold | bolder | lighter - 글자두께 */
+        #txt1 { color:red; font-size:32px; font-style: oblique;}
+        #txt1 span { font-weight: bold;}
+        /* font-stretch : normal | condensed | expanded | extra-expanded | extra-condensed | semi-expanded | semi-condensed 
+        - 장평(글자의가로세로비율) - 영문전용 폰트에서만 적용됨 */
+        /* font-kerning : auto | normal | none 단어별 자간을 말함. 해당 폰트에서 해당 기능을 제공해야 적용됨 */
+        /* font-variant : noraml | small-caps -> 영문소문자크기로 */
+        /* text-transform : none | ippercase | lowercase | capitalize | 영문(알파벳 계열)을 대소문자로 변경 */
+        #txt2 { font-stretch: narrower; font-kerning: none; font-variant: normal; text-transform: capitalize; letter-spacing: 3px; word-spacing: 5px;}
+        /* line-height : 배수 | px단위숫자 ~ -> 행간(행높이) */
+        /* text-decoration : none | underline 글자에 줄 (위/중간/아래)넣기 */
+        /* text-indent: px단위숫자 | em단위숫자 -> 첫 줄 들여 쓰기/내어쓰기*/
+        /* text-align : left | center | right 글자 정렬 방식 */
+        #txt3 {line-height: 3.6; line-height: 40px; text-decoration: line-through; text-decoration-style: dotted; text-indent: 20px;text-indent: -20px; text-align: center;}
+        /* word-wrap : normal | break-word, 영문을 한 줄에 표시하기 위한 보호 기능*/
+        /* word-break : keep-all | break-all 영문이 원래는 한 줄에 같이 표시되어야 하지만, 중간에 잘라 표시할 경우 사용하는 속성 */
+        /* font-family : 1차글꼴명, 2차글꼴명, 기본폰트 - 글꼴 지정 ; */
+        /* 기본 폰트 : 운영체제에 폰트가 전혀 아무 것도 없는 경우, 웹 브라우저에서 기본적으로 제공하는 폰트
+            sans-serif : 고딕계열, serif : 명조계열, cursive : 궁서계열 monospace : 글자폭과높이비율이 1:1인 폰트, fantasy : 디자인폰트 */
+            /* @font-face 규칙 : 글꼴이름과 글꼴파일의 위치를 지정하는 규칙 */
+            /* 무료 폰트 : 눈누(한글폰트), 다폰트(응용프로그램용 모든 언어폰트), 구글폰트(웹용 모든 언어폰트) */
+
+        @font-face{
+            font-family: "폰트1"; /* 폰트이름 */
+            src:url("font1.woff"); /* .ttf, .otf, .eot, .woff */
+        }
+        /*
+        font-family: 'Nanum Gothic', sans-serif;
+        */
+        #txt4 {word-break: break-all; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p class="txt" id="txt1">문단 및 글자 <span>모양</span>1 - color</p>
+        <p class="txt" id="txt2">문단 및 글자 모양2 - font, Display Effect</p>
+        <p class="txt" id="txt3">문단 및 글자 모양3</p>
+        <p class="txt" id="txt4">문단 및 글자 모양4</p>
+        <p class="txt" id="txt5">문단 및 글자 모양5</p>
+        <p class="txt" id="txt6">문단 및 글자 모양6</p>
+        <p class="txt" id="txt7">문단 및 글자 모양7</p>
+        <p class="txt" id="txt8">문단 및 글자 모양8</p>
+        <p class="txt" id="txt9">문단 및 글자 모양9</p>
+        <p class="txt" id="txt10">문단 및 글자 모양10</p>
+    </div>
+</body>
+</html>
